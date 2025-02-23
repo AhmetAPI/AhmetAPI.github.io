@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-lang-key="title">Kişisel Web Sayfam</title>
+    <!-- Modern, kod temalı font -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Yükleme Ekranı -->
+    <div class="matrix-loader">
+      <div class="text" data-lang-key="loading">Yükleniyor...</div>
+      <div class="spinner"></div>
+    </div>
+    <!-- Matrix Efekti İçin Canvas (arka planda) -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Header -->
+    <header>
+      <div class="HeaderButton">
+        <button class="butonlar" data-lang-key="about">Hakkımda</button>
+        <button class="butonlar" data-lang-key="skills">Yeteneklerim</button>
+        <button class="butonlar" data-lang-key="projects">Projeler</button>
+        <button class="butonlar" data-lang-key="contact">İletişim</button>
+      </div>
+      <div class="language-switcher">
+        <button class="lang-btn" id="desktopLangBtn">TR</button>
+      </div>
+      <div class="mobile-menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <!-- Mobil Menü -->
+    <div class="mobile-menu">
+      <button class="menu-close">&times;</button>
+      <button class="butonlar" data-lang-key="about">Hakkımda</button>
+      <button class="butonlar" data-lang-key="skills">Yeteneklerim</button>
+      <button class="butonlar" data-lang-key="projects">Projeler</button>
+      <button class="butonlar" data-lang-key="contact">İletişim</button>
+      <button class="menu-close">&times;</button>
+    </div>
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Layout: Geliştirilmiş Sidebar ve İçerik -->
+    <div class="layout">
+      <aside class="sidebar">
+        <img class="profile-img" src="https://avatars.githubusercontent.com/u/199961637?s=400&u=a85a4f0a1e1e058480bd83cbe262f19eb6fc3df2&v=4" alt="Profil Resmi" />
+        <div class="profile-info">
+          <h2>🐊 AhmetAPI</h2>
+          <p>⌨️ Age: 17</p>
+          <p>🔰 Username: Ahmet</p>
+          <div class="social-links">
+            <a href="#" target="_blank">Twitter 🐊</a>
+            <a href="#" target="_blank">Facebook 🐊</a>
+            <a href="#" target="_blank">Instagram 🐊</a>
+          </div>
+        </div>
+      </aside>
+      <main class="content">
+        <div class="neon-form">
+          <!-- Hakkımda Bölümü -->
+          <div class="form-content active" id="about">
+            <h1 data-lang-key="about_title">Hakkımda</h1>
+            <p data-lang-key="about_text">
+              Kendimden kısaca bahsedeyim... Yaratıcı, çözüm odaklı ve teknolojiyi yakından takip eden bir web geliştiricisiyim.
+            </p>
+          </div>
+
+          <!-- Yetenekler Bölümü -->
+          <div class="form-content" id="skills">
+            <h1 data-lang-key="skills_title">Yetenekler</h1>
+            <ul class="skills-list">
+              <li>HTML5, CSS3, JavaScript</li>
+              <li>React, Vue</li>
+              <li>Node.js, Express</li>
+              <li>Photoshop, Illustrator</li>
+            </ul>
+          </div>
+
+          <!-- Projeler Bölümü -->
+          <div class="form-content" id="projects">
+            <h1 data-lang-key="projects_title">Projeler</h1>
+            <div class="projects-grid">
+              <div class="project-card">
+                <img src="https://via.placeholder.com/350" alt="Proje 1" />
+                <div class="project-info">
+                  <h3>🐊 Proje 1</h3>
+                  <p>Bu, proje 1 için kısa açıklamadır.</p>
+                </div>
+              </div>
+              <div class="project-card">
+                <img src="https://via.placeholder.com/350" alt="Proje 2" />
+                <div class="project-info">
+                  <h3>🐊 Proje 2</h3>
+                  <p>Bu, proje 2 için kısa açıklamadır.</p>
+                </div>
+              </div>
+              <div class="project-card">
+                <img src="https://via.placeholder.com/350" alt="Proje 3" />
+                <div class="project-info">
+                  <h3>🐊 Proje 3</h3>
+                  <p>Bu, proje 3 için kısa açıklamadır.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- İletişim Bölümü -->
+          <div class="form-content" id="contact">
+            <h1 data-lang-key="contact_title">İletişim</h1>
+            <form class="contact-form">
+              <input type="text" required data-lang-key="contact_name" placeholder="Adınız" />
+              <input type="email" required data-lang-key="contact_email" placeholder="Emailiniz" />
+              <textarea required data-lang-key="contact_message" placeholder="Mesajınız"></textarea>
+              <button type="submit" data-lang-key="contact_submit">Gönder</button>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
