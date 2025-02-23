@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     draw();
   }
-
+  initMatrix();
   window.addEventListener('load', () => {
     setTimeout(() => {
       loader.classList.add('hidden');
